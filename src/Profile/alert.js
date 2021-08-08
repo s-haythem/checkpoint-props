@@ -1,14 +1,14 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const ActionLink = () => {
-  const HandleClick = (e) => {
-    e.preventDefault();
+  const HandleName = () => {
     alert("Haythem Smirani");
   };
   return (
     <a
       href="/"
-      onClick={HandleClick}
+      onClick={HandleName}
       style={{
         width: "300px",
         marginTop: "5%",
@@ -17,9 +17,12 @@ const ActionLink = () => {
         justifyContent: "center",
       }}
     >
-      Click for Magic !
+      Click Me !
     </a>
   );
+};
+ActionLink.propTypes = {
+  HandleName: PropTypes.func,
 };
 
 export default ActionLink;
