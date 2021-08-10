@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 
 const profile = (props) => {
+  const{fullName,handleName}=props;
   return (
     <div
       style={{
@@ -20,7 +21,8 @@ const profile = (props) => {
       />
       <h2 style={{ color: "blue" }}>{props.fullName}</h2>
       <p style={{ width: "200px" }}>Bio : {props.bio}</p>
-      <p>Profession : {props.profession}</p>
+      <p style={{width:"200px"}}>Profession : {props.profession}</p>
+      <button style= {{width:"200px", marginTop:'10px'}} onClick={() => handleName(fullName)} >Name</button>
     </div>
   );
 };
@@ -30,7 +32,8 @@ profile.defaultProps = {
 profile.propTypes = {
   fullName : PropTypes.string,
   bio : PropTypes.string,
-  profession : PropTypes.string
+  profession : PropTypes.string,
+  handleName : PropTypes.func
 }
 
 export default profile;

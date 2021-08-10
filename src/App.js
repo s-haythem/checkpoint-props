@@ -6,6 +6,7 @@ import ActionLink from "./Profile/alert";
 
 
 function App() {
+  const handleName = (fullName) => alert(` Hello there it's ${fullName}`);
   return (
     <div
       style={{
@@ -21,6 +22,7 @@ function App() {
         fullName= "Haythem Smirani"
         bio={`Why are you asking ?!!`}
         profession="Student"
+        handleName={handleName}
       />
       <ActionLink />
     </div>
